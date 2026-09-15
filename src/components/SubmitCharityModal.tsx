@@ -1,9 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { Loader2, Send } from "lucide-react";
 import { toast } from "sonner";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { submitCharity } from "@/lib/submit-charity.functions";
 
 const OPEN_EVENT = "dotis:open-submit";
 
@@ -31,7 +29,6 @@ const labelClass = "font-stamp text-[0.6rem] uppercase tracking-[0.24em] text-in
 export function SubmitCharityModal() {
   const [open, setOpen] = useState(false);
   const [sending, setSending] = useState(false);
-  const send = useServerFn(submitCharity);
 
   useEffect(() => {
     const onOpen = () => setOpen(true);
@@ -54,17 +51,28 @@ export function SubmitCharityModal() {
       region: String(data.get("region") ?? ""),
       category: String(data.get("category") ?? ""),
       message: String(data.get("message") ?? ""),
-      terms: true as const,
+      terms: "true",
     };
 
     setSending(true);
     try {
-      const result = await send({ data: payload });
-      if (result.delivered) {
-        toast.success("Submission received. We'll be in touch by email.");
-      } else {
-        toast.success("Submission received. We'll follow up by email shortly.");
+      const formData = new URLSearchParams({
+        _subject: `Dotis charity submission - ${payload.charityName}`,
+        _template: "table",
+        _captcha: "false",
+        _replyto: payload.email,
+        ...payload,
+      });
+      const response = await fetch("https://formsubmit.co/ajax/ameerrhamzaah389@gmail.com", {
+        method: "POST",
+        headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData,
+      });
+      const result = (await response.json().catch(() => null)) as { success?: boolean | string; message?: string } | null;
+      if (!response.ok || (result?.success !== true && result?.success !== "true")) {
+        throw new Error(result?.message || `Could not send submission (${response.status}).`);
       }
+      toast.success("Submission received. We'll be in touch by email.");
       form.reset();
       setOpen(false);
     } catch (error) {
