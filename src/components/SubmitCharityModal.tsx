@@ -63,7 +63,7 @@ export function SubmitCharityModal() {
         _replyto: payload.email,
         ...payload,
       });
-      const response = await fetch("https://formsubmit.co/ajax/ameerrhamzaah389@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/apply@dotis.ai", {
         method: "POST",
         headers: { Accept: "application/json", "Content-Type": "application/x-www-form-urlencoded" },
         body: formData,

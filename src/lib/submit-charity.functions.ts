@@ -15,7 +15,7 @@ const SubmissionSchema = z.object({
   terms: z.literal(true),
 });
 
-const NOTIFY_TO = "ameerrhamzaah389@gmail.com";
+const NOTIFY_TO = "apply@dotis.ai";
 
 export const submitCharity = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => SubmissionSchema.parse(input))
