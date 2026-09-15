@@ -17,20 +17,9 @@ const SubmissionSchema = z.object({
 
 const NOTIFY_TO = "ameerrhamzaah389@gmail.com";
 
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
 export const submitCharity = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => SubmissionSchema.parse(input))
   .handler(async ({ data }) => {
-    const lovableKey = process.env["LOVABLE_API_KEY"];
-    const resendKey = process.env["RESEND_API_KEY"];
-
     const rows: [string, string][] = [
       ["Contact name", data.name],
       ["Email", data.email],
@@ -44,35 +33,25 @@ export const submitCharity = createServerFn({ method: "POST" })
       ["Message", data.message],
     ];
 
-    const html = `<h2>New Dotis charity submission</h2><table cellpadding="6">${rows
-      .filter(([, value]) => value)
-      .map(([label, value]) => `<tr><td><strong>${label}</strong></td><td>${escapeHtml(value)}</td></tr>`)
-      .join("")}</table>`;
+    const formData = new URLSearchParams({
+      _subject: `Dotis charity submission - ${data.charityName}`,
+      _template: "table",
+      _captcha: "false",
+      _replyto: data.email,
+      ...Object.fromEntries(rows),
+    });
 
-    if (!lovableKey || !resendKey) {
-      console.error("Charity submission received but email is not configured yet", rows);
-      return { ok: false as const, delivered: false as const };
-    }
-
-    const response = await fetch("https://connector-gateway.lovable.dev/resend/emails", {
+    const response = await fetch(`https://formsubmit.co/ajax/${NOTIFY_TO}`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${lovableKey}`,
-        "X-Connection-Api-Key": resendKey,
-        "Content-Type": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify({
-        from: "Dotis <onboarding@resend.dev>",
-        to: [NOTIFY_TO],
-        reply_to: data.email,
-        subject: `Dotis charity submission — ${data.charityName}`,
-        html,
-      }),
+      body: formData,
     });
 
     if (!response.ok) {
       const body = await response.text();
-      console.error(`Resend request failed [${response.status}]: ${body}`);
+      console.error(`FormSubmit request failed [${response.status}]: ${body}`);
       throw new Error(`Could not send the submission [${response.status}]: ${body}`);
     }
 
