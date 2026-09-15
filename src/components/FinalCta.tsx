@@ -58,7 +58,7 @@ export function FinalCta() {
         alt=""
         aria-hidden
         style={{ x: leftX, y: leftY }}
-        initial={{ opacity: 0, x: -60, rotate: -4 }}
+        initial={{ opacity: 0, rotate: -4 }}
         whileInView={{ opacity: 1, rotate: -2 }}
         viewport={{ once: true }}
         transition={{ duration: 1.1, ease }}
@@ -69,7 +69,7 @@ export function FinalCta() {
         alt=""
         aria-hidden
         style={{ x: rightX, y: rightY }}
-        initial={{ opacity: 0, x: 60, rotate: 4 }}
+        initial={{ opacity: 0, rotate: 4 }}
         whileInView={{ opacity: 1, rotate: 2 }}
         viewport={{ once: true }}
         transition={{ duration: 1.1, ease }}

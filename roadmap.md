@@ -9,3 +9,6 @@
 - [x] Replace the hero logo with a download icon and add the orange Dotis mark to the sticky sun
 - [x] Remove landing-page dash punctuation and update the browser title/favicon
 - [x] Move final-section collages inward and lower
+- [x] Replace the Android icon with the supplied mark in black
+- [x] Reduce spacing above the charity campaign section
+- [x] Replace final-section collages and align their outer margins with the first section
