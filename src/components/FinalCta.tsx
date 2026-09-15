@@ -97,25 +97,25 @@ export function FinalCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.35, ease }}
-          className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
+          className="mt-6 flex flex-row items-center justify-center gap-2 sm:gap-4"
         >
           <a
             href="#causes"
             data-cursor-hover
-            className="rise-button group inline-flex items-center gap-2 rounded-full border border-ink/15 bg-ink px-5 py-3 text-sm font-medium text-paper transition-transform duration-300 hover:scale-[1.03] sm:gap-3 sm:px-8 sm:py-3.5 sm:text-base md:text-lg"
+            className="rise-button group inline-flex whitespace-nowrap items-center gap-1.5 rounded-full border border-ink/15 bg-ink px-3 py-3 text-xs font-medium text-paper transition-transform duration-300 hover:scale-[1.03] sm:gap-3 sm:px-8 sm:py-3.5 sm:text-base md:text-lg"
           >
             <span aria-hidden className="rise-fill rise-fill--leaf" />
             <Download className="rise-label h-4 w-4 sm:h-5 sm:w-5" />
-            <span className="rise-label">Install Dotis, it's free</span>
+            <span className="rise-label">Install free</span>
           </a>
           <button
             type="button"
             onClick={openSubmitDialog}
             data-cursor-hover
-            className="rise-button group inline-flex items-center gap-2 rounded-full border border-paper/30 px-5 py-3 text-sm font-medium text-paper sm:px-8 sm:py-3.5 sm:text-base md:text-lg"
+            className="rise-button group inline-flex whitespace-nowrap items-center gap-1.5 rounded-full border border-paper/30 px-3 py-3 text-xs font-medium text-paper sm:gap-3 sm:px-8 sm:py-3.5 sm:text-base md:text-lg"
           >
             <span aria-hidden className="rise-fill rise-fill--paper" />
-            <span className="rise-label transition-colors duration-500 group-hover:text-ink">Submit your charity</span>
+            <span className="rise-label transition-colors duration-500 group-hover:text-ink">Submit charity</span>
             <ArrowUpRight className="rise-label h-4 w-4 transition-colors duration-500 group-hover:text-ink sm:h-5 sm:w-5" />
           </button>
         </motion.div>
