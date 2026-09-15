@@ -44,15 +44,24 @@ export const submitCharity = createServerFn({ method: "POST" })
     const response = await fetch(`https://formsubmit.co/ajax/${NOTIFY_TO}`, {
       method: "POST",
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/x-www-form-urlencoded",
       },
       body: formData,
     });
 
+    const result = (await response.json().catch(() => null)) as { success?: boolean | string; message?: string } | null;
+
     if (!response.ok) {
-      const body = await response.text();
-      console.error(`FormSubmit request failed [${response.status}]: ${body}`);
-      throw new Error(`Could not send the submission [${response.status}]: ${body}`);
+      const message = result?.message || `HTTP ${response.status}`;
+      console.error(`FormSubmit request failed [${response.status}]: ${message}`);
+      throw new Error(`Could not send the submission: ${message}`);
+    }
+
+    if (result?.success !== true && result?.success !== "true") {
+      const message = result?.message || "FormSubmit did not accept the submission.";
+      console.error(`FormSubmit rejected the submission: ${message}`);
+      throw new Error(message);
     }
 
     return { ok: true as const, delivered: true as const };

@@ -67,8 +67,9 @@ export function SubmitCharityModal() {
       }
       form.reset();
       setOpen(false);
-    } catch {
-      toast.error("Something went wrong. Please try again in a moment.");
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Please try again in a moment.";
+      toast.error(message);
     } finally {
       setSending(false);
     }
