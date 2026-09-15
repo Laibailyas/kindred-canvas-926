@@ -12,3 +12,5 @@
 - [x] Replace the Android icon with the supplied mark in black
 - [x] Reduce spacing above the charity campaign section
 - [x] Replace final-section collages and align their outer margins with the first section
+- [x] Remove the black backgrounds from the final-section collages
+- [x] Restore balanced spacing around the whitelisted-charities block

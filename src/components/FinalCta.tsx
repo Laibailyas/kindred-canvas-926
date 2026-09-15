@@ -2,11 +2,8 @@ import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { ArrowUpRight, Download } from "lucide-react";
 import { openSubmitDialog } from "./SubmitCharityModal";
-import collageFinalLeftAsset from "@/assets/collage-final-left.png.asset.json";
-import collageFinalRightAsset from "@/assets/collage-final-right.png.asset.json";
-
-const collageFinalLeft = collageFinalLeftAsset.url;
-const collageFinalRight = collageFinalRightAsset.url;
+import collageFinalLeft from "@/assets/collage-final-left-transparent.png";
+import collageFinalRight from "@/assets/collage-final-right-transparent.png";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
