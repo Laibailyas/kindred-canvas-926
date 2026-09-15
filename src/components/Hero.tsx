@@ -5,6 +5,7 @@ import { PartnerMarquee } from "./PartnerMarquee";
 import { InstallSun, SunShape } from "./InstallSun";
 import { openSubmitDialog } from "./SubmitCharityModal";
 import logo from "@/assets/logo.png";
+import androidLogo from "@/assets/android-logo-black.png";
 import collageLeft from "@/assets/collage-left.png";
 import collageRight from "@/assets/collage-right.png";
 
@@ -135,12 +136,7 @@ export function Hero() {
                 <svg viewBox="0 0 24 24" className="h-7 w-7 fill-current" aria-hidden><path d="M3 5.5 10.5 4.4v7.1H3zM11.6 4.2 21 3v8.5h-9.4zM3 12.5h7.5v7.1L3 18.5zM11.6 12.5H21V21l-9.4-1.3z" /></svg>
               </span>
               <span title="Android" className="platform-icon">
-                <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" aria-hidden>
-                  <path d="M7.15 7.5a5.75 5.75 0 0 1 9.7 0M8.25 4.35 6.9 2.1m8.85 2.25 1.35-2.25" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" />
-                  <path d="M5.5 9.25h13v7.15a2.1 2.1 0 0 1-2.1 2.1H7.6a2.1 2.1 0 0 1-2.1-2.1V9.25Z" fill="currentColor" />
-                  <circle cx="9" cy="12.25" r=".7" fill="var(--paper)" />
-                  <circle cx="15" cy="12.25" r=".7" fill="var(--paper)" />
-                </svg>
+                <img src={androidLogo} alt="" aria-hidden className="h-7 w-7 object-contain" />
               </span>
               <span title="macOS" className="platform-icon" aria-label="macOS">
                 <svg viewBox="0 0 384 512" className="h-7 w-7 fill-current" aria-hidden>

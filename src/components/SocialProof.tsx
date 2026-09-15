@@ -71,7 +71,7 @@ export function SocialProof() {
   const inView = useInView(statsRef, { once: true, margin: "-15%" });
 
   return (
-    <section id="proof" className="relative overflow-hidden bg-paper px-5 pb-12 pt-20 text-ink sm:px-6 sm:pb-16 sm:pt-28 md:pb-20 md:pt-36">
+    <section id="proof" className="relative overflow-hidden bg-paper px-5 pb-5 pt-20 text-ink sm:px-6 sm:pb-7 sm:pt-28 md:pb-8 md:pt-36">
       <div className="relative mx-auto max-w-[1800px]">
         <motion.div
           initial={{ opacity: 0, y: 26 }}

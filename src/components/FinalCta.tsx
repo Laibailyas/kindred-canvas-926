@@ -2,8 +2,11 @@ import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { ArrowUpRight, Download } from "lucide-react";
 import { openSubmitDialog } from "./SubmitCharityModal";
-import collageFinalLeft from "@/assets/collage-final-left.png";
-import collageFinalRight from "@/assets/collage-final-right.png";
+import collageFinalLeftAsset from "@/assets/collage-final-left.png.asset.json";
+import collageFinalRightAsset from "@/assets/collage-final-right.png.asset.json";
+
+const collageFinalLeft = collageFinalLeftAsset.url;
+const collageFinalRight = collageFinalRightAsset.url;
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -59,7 +62,7 @@ export function FinalCta() {
         whileInView={{ opacity: 1, rotate: -2 }}
         viewport={{ once: true }}
         transition={{ duration: 1.1, ease }}
-        className="pointer-events-none absolute -left-[4vw] top-[4svh] z-20 h-auto w-[55vw] max-w-[240px] object-contain object-left-top mix-blend-multiply sm:left-[3vw] sm:top-[5svh] sm:w-[38vw] sm:max-w-[400px] lg:left-[4vw] lg:top-[6svh] lg:w-[30vw] lg:max-w-[560px]"
+        className="pointer-events-none absolute left-4 top-[4svh] z-20 h-auto w-[46vw] max-w-[240px] object-contain object-left-top mix-blend-multiply sm:left-3 sm:top-[5svh] sm:w-[38vw] sm:max-w-[400px] lg:left-5 lg:top-[6svh] lg:w-[36vw] lg:max-w-[650px]"
       />
       <motion.img
         src={collageFinalRight}
@@ -70,7 +73,7 @@ export function FinalCta() {
         whileInView={{ opacity: 1, rotate: 2 }}
         viewport={{ once: true }}
         transition={{ duration: 1.1, ease }}
-        className="pointer-events-none absolute -right-[4vw] top-[4svh] z-20 h-auto w-[55vw] max-w-[240px] object-contain object-right-top mix-blend-multiply sm:right-[3vw] sm:top-[5svh] sm:w-[38vw] sm:max-w-[400px] lg:right-[4vw] lg:top-[6svh] lg:w-[30vw] lg:max-w-[560px]"
+        className="pointer-events-none absolute right-4 top-[4svh] z-20 h-auto w-[46vw] max-w-[240px] object-contain object-right-top mix-blend-multiply sm:right-3 sm:top-[5svh] sm:w-[38vw] sm:max-w-[400px] lg:right-5 lg:top-[6svh] lg:w-[36vw] lg:max-w-[650px]"
       />
 
       <div className="relative z-10 mx-auto mt-[50svh] flex max-w-2xl flex-col items-center px-2 text-center sm:px-8 md:mt-[17%]">
