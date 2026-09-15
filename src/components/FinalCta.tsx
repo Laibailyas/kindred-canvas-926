@@ -66,7 +66,7 @@ export function FinalCta() {
           Ready when you are
         </motion.span>
 
-        <h2 className="mt-4 font-display text-[clamp(1.9rem,8.4vw,5.5rem)] uppercase leading-[0.95] text-ink sm:mt-6">
+        <h2 className="mt-4 font-display text-[clamp(1.9rem,8.4vw,5.5rem)] uppercase leading-[0.95] text-paper sm:mt-6">
           {["Start Giving", "Without Paying"].map((line, li) => (
             <span key={line} className="block overflow-hidden pb-1">
               <motion.span
@@ -87,7 +87,7 @@ export function FinalCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25, ease }}
-          className="mx-auto mt-4 max-w-md px-2 text-sm leading-snug text-ink/90 sm:text-base md:text-lg"
+          className="mx-auto mt-4 max-w-md px-2 text-sm leading-snug text-paper/90 sm:text-base md:text-lg"
         >
           Free forever, off in one tap, and you support a verified charity of your choice without spending one cent.
         </motion.p>
@@ -112,7 +112,7 @@ export function FinalCta() {
             type="button"
             onClick={openSubmitDialog}
             data-cursor-hover
-            className="rise-button group inline-flex items-center gap-2 rounded-full border border-ink/30 px-5 py-3 text-sm font-medium text-ink sm:px-8 sm:py-3.5 sm:text-base md:text-lg"
+            className="rise-button group inline-flex items-center gap-2 rounded-full border border-paper/30 px-5 py-3 text-sm font-medium text-paper sm:px-8 sm:py-3.5 sm:text-base md:text-lg"
           >
             <span aria-hidden className="rise-fill rise-fill--paper" />
             <span className="rise-label transition-colors duration-500 group-hover:text-ink">Submit your charity</span>
