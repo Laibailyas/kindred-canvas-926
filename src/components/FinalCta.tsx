@@ -2,8 +2,8 @@ import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { ArrowUpRight, Download } from "lucide-react";
 import { openSubmitDialog } from "./SubmitCharityModal";
-import collageFinalLeft from "@/assets/final-water-left.png";
-import collageFinalRight from "@/assets/final-giving-right.png";
+import collageFinalLeft from "@/assets/final-best-2-left.png";
+import collageFinalRight from "@/assets/final-best-right.png";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -55,7 +55,7 @@ export function FinalCta() {
         className="pointer-events-none absolute right-4 top-[4svh] z-20 h-auto w-[42vw] max-w-[210px] object-contain object-right-top mix-blend-multiply sm:right-3 sm:top-[5svh] sm:w-[34vw] sm:max-w-[350px] lg:right-5 lg:top-[6svh] lg:w-[32vw] lg:max-w-[560px]"
       />
 
-      <div className="relative z-10 mx-auto mt-[50svh] flex max-w-2xl -translate-y-[8svh] flex-col items-center px-2 text-center sm:px-8 md:mt-0">
+      <div className="relative z-10 mx-auto mt-[20%] flex max-w-2xl -translate-y-[8svh] flex-col items-center px-2 text-center sm:px-8 md:mt-0">
         <motion.span
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
