@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, BadgeCheck, HandCoins, LifeBuoy, PawPrint, Utensils } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, Download, HandCoins, PawPrint, TriangleAlert, Utensils } from "lucide-react";
 import wildlifeImage from "@/assets/cause-wildlife.jpg";
 import foodImage from "@/assets/cause-food.jpg";
 import disasterImage from "@/assets/cause-disaster.jpg";
@@ -38,8 +38,8 @@ const CAUSES = [
   {
     id: "disaster",
     label: "Disaster response",
-    short: "Response",
-    icon: LifeBuoy,
+    short: "Disaster",
+    icon: TriangleAlert,
     image: disasterImage,
     alt: "Disaster relief volunteers organizing emergency supplies after a flood",
     blurb: "Back first responders with shelter, medicine and supplies in the hours that matter most.",
@@ -183,11 +183,21 @@ export function ChooseCause() {
                           <p className="font-stamp text-[0.62rem] uppercase tracking-[0.3em] text-paper/70">0{index + 1} / choose your impact</p>
                           <h3 className="mt-3 font-display text-[clamp(1.9rem,5vw,5.4rem)] uppercase leading-[0.9]">{item.label}</h3>
                           <p className="mt-3 max-w-xl text-sm leading-relaxed text-paper/80 md:text-base">{item.blurb}</p>
-                          <div className="mt-5 flex flex-wrap gap-2">
+                          <div className="mt-5 flex flex-wrap items-center gap-2">
+                            <span className="mr-1 font-stamp text-[0.58rem] uppercase tracking-[0.22em] text-paper/65">Partners like</span>
                             {item.charities.map((name) => (
                               <span key={name} className="whitespace-nowrap border border-paper/30 bg-ink/35 px-2 py-1 text-[0.6rem] tracking-wide backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-xs sm:tracking-normal">{name}</span>
                             ))}
                           </div>
+                          <a
+                            href="#install"
+                            data-cursor-hover
+                            className="rise-button group pointer-events-auto mt-5 inline-flex items-center gap-2 rounded-full border border-paper/30 px-5 py-2.5 text-sm font-medium text-paper transition-transform duration-300 hover:scale-[1.03]"
+                          >
+                            <span aria-hidden className="rise-fill rise-fill--flare" />
+                            <Download className="rise-label h-4 w-4" />
+                            <span className="rise-label transition-colors duration-500 group-hover:text-paper">Start donating for free</span>
+                          </a>
                         </div>
 
                         <div className="pointer-events-auto bg-paper p-5 text-ink md:p-6">
