@@ -130,7 +130,7 @@ export function Hero() {
 
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1.05 }} className="mt-7">
-            <p className="text-base font-medium text-ink/80">Available worldwide, direct from us, on</p>
+            <p className="text-base font-medium text-ink/80">Available worldwide for</p>
             <div className="mt-3 flex items-center justify-center gap-7 text-ink">
               <span title="Windows" className="platform-icon">
                 <svg viewBox="0 0 24 24" className="h-7 w-7 fill-current" aria-hidden><path d="M3 5.5 10.5 4.4v7.1H3zM11.6 4.2 21 3v8.5h-9.4zM3 12.5h7.5v7.1L3 18.5zM11.6 12.5H21V21l-9.4-1.3z" /></svg>

@@ -150,10 +150,6 @@ export function SecurityControl() {
             className="h-14 w-full object-contain opacity-70 transition-opacity duration-300 hover:opacity-100"
           />
         </div>
-        <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-paper/55 sm:text-base">
-          Self-hosted on our own infrastructure (no Amazon), open-source from top to bottom (no Google, no Apple).
-          We do not support big tech or pay companies that stand against our values, so you download Dotis straight from us and anyone can inspect the code.
-        </p>
       </motion.div>
     </section>
   );

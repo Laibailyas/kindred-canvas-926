@@ -67,6 +67,12 @@ export function Faq() {
           <p className="mt-5 max-w-sm text-base leading-relaxed text-ink/70 md:text-lg">
             Straight answers about speed, privacy and where the money lands.
           </p>
+          <a
+            href="mailto:apply@dotis.ai"
+            className="mt-8 inline-block text-sm font-medium text-flare underline decoration-flare/40 underline-offset-4 transition-colors hover:text-ink hover:decoration-ink/40 md:text-base"
+          >
+            Have more questions? Reach out to us.
+          </a>
         </motion.div>
 
         <ul className="border-t border-ink/12">
