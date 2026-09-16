@@ -2,8 +2,8 @@ import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { ArrowUpRight, Download } from "lucide-react";
 import { openSubmitDialog } from "./SubmitCharityModal";
-import collageFinalLeft from "@/assets/final-best-2-left.png";
-import collageFinalRight from "@/assets/final-best-right.png";
+import collageFinalLeft from "@/assets/final-water-left.png";
+import collageFinalRight from "@/assets/final-giving-right.png";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -106,7 +106,7 @@ export function FinalCta() {
           >
             <span aria-hidden className="rise-fill rise-fill--leaf" />
             <Download className="rise-label h-4 w-4 sm:h-5 sm:w-5" />
-            <span className="rise-label">Install free</span>
+            <span className="rise-label">Install Dotis, it's free</span>
           </a>
           <button
             type="button"
@@ -115,7 +115,7 @@ export function FinalCta() {
             className="rise-button group inline-flex whitespace-nowrap items-center gap-1.5 rounded-full border border-paper/30 px-3 py-3 text-xs font-medium text-paper sm:gap-3 sm:px-8 sm:py-3.5 sm:text-base md:text-lg"
           >
             <span aria-hidden className="rise-fill rise-fill--paper" />
-            <span className="rise-label transition-colors duration-500 group-hover:text-ink">Submit charity</span>
+            <span className="rise-label transition-colors duration-500 group-hover:text-ink">Submit your charity</span>
             <ArrowUpRight className="rise-label h-4 w-4 transition-colors duration-500 group-hover:text-ink sm:h-5 sm:w-5" />
           </button>
         </motion.div>
