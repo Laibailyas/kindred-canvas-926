@@ -171,7 +171,7 @@ export function SocialProof() {
               <Globe2 className="h-3.5 w-3.5 text-flare" /> Worldwide, 40+ countries
             </span>
           </div>
-          <div className="mt-5 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap items-center gap-3">
             {CHARITIES.map((charity, i) => (
               <motion.span
                 key={charity.name}
@@ -188,9 +188,7 @@ export function SocialProof() {
                 <span className="font-stamp text-[0.55rem] uppercase tracking-[0.2em] text-ink/40">{charity.region}</span>
               </motion.span>
             ))}
-          </div>
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 pt-4">
-            <p className="flex min-w-0 items-center gap-2 text-sm text-ink/60">
+            <p className="flex min-w-0 flex-[1_1_28rem] items-center gap-2 text-sm text-ink/60">
               <HeartHandshake className="h-4 w-4 shrink-0 text-flare" />
               Local charity missing? Submit it and we'll verify it wherever in the world it works.
             </p>
