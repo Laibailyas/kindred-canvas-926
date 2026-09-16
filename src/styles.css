@@ -184,6 +184,30 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--flare) var(--ink);
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--ink);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: var(--flare);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--paper);
+  }
+
   html,
   body {
     overscroll-behavior-y: none;
@@ -326,5 +350,11 @@
   }
   .download-fill {
     transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
