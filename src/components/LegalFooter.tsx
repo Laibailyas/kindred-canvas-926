@@ -58,7 +58,7 @@ export function LegalFooter() {
 
   return (
     <>
-      <footer className="border-t border-paper/10 bg-ink px-5 py-8 text-paper sm:px-6 sm:py-10">
+      <footer className="relative z-10 border-t border-paper/10 bg-ink px-5 py-8 text-paper sm:px-6 sm:py-10">
         <div className="mx-auto flex max-w-[1800px] flex-col gap-4 text-sm text-paper/65 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright 2026 dotis.ai</p>
           <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">
