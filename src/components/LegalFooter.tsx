@@ -52,13 +52,15 @@ const DOCUMENTS: Record<LegalDocument, { label: string; title: string; descripti
   },
 };
 
-export function LegalFooter() {
+export function LegalFooter({ embedded = false }: { embedded?: boolean }) {
   const [document, setDocument] = useState<LegalDocument | null>(null);
   const activeDocument = document ? DOCUMENTS[document] : null;
 
   return (
     <>
-      <footer className="relative z-10 border-t border-paper/10 bg-ink px-5 py-8 text-paper sm:px-6 sm:py-10">
+      <footer
+        className={`${embedded ? "absolute inset-x-0 bottom-0" : "relative"} z-30 border-t border-paper/10 px-5 py-6 text-paper sm:px-6 sm:py-8 ${embedded ? "bg-transparent" : "bg-ink"}`}
+      >
         <div className="mx-auto flex max-w-[1800px] flex-col gap-4 text-sm text-paper/65 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright 2026 dotis.ai</p>
           <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">

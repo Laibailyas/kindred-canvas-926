@@ -2,6 +2,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { useEffect } from "react";
 import { ArrowUpRight, Download } from "lucide-react";
 import { openSubmitDialog } from "./SubmitCharityModal";
+import { LegalFooter } from "./LegalFooter";
 import collageFinalLeft from "@/assets/final-best-2-left.png";
 import collageFinalRight from "@/assets/final-best-right.png";
 
@@ -120,6 +121,7 @@ export function FinalCta() {
           </button>
         </motion.div>
       </div>
+      <LegalFooter embedded />
     </section>
   );
 }
