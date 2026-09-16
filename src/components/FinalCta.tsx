@@ -29,7 +29,7 @@ export function FinalCta() {
   return (
     <section
       id="install"
-      className="relative flex h-[84svh] min-h-[540px] flex-col items-center justify-center overflow-hidden bg-paper px-4 text-ink sm:px-6 md:h-[82svh]"
+      className="relative flex h-[100svh] min-h-[620px] flex-col items-center justify-center overflow-hidden bg-paper px-4 text-ink sm:px-6 md:h-screen"
     >
       {/* side collages */}
       <motion.img
@@ -55,7 +55,7 @@ export function FinalCta() {
         className="pointer-events-none absolute right-4 top-[4svh] z-20 h-auto w-[42vw] max-w-[210px] object-contain object-right-top mix-blend-multiply sm:right-3 sm:top-[5svh] sm:w-[34vw] sm:max-w-[350px] lg:right-5 lg:top-[6svh] lg:w-[32vw] lg:max-w-[560px]"
       />
 
-      <div className="relative z-10 mx-auto flex max-w-2xl -translate-y-[4svh] flex-col items-center px-2 text-center sm:px-8">
+      <div className="relative z-10 mx-auto mt-[50svh] flex max-w-2xl -translate-y-[8svh] flex-col items-center px-2 text-center sm:px-8 md:mt-0">
         <motion.span
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}

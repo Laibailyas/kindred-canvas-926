@@ -79,7 +79,9 @@ export function InstallSun({ anchorRef }: { anchorRef: RefObject<HTMLElement | n
     }
 
     if (ctaProgress > 0) {
-      // Let the bloom sit on the bottom edge so only its upper half frames the CTA.
+      // A big half-sun sitting right on the bottom edge of the viewport — wide
+      // enough that its points reach toward the side collages, but its bottom
+      // half runs off the screen instead of ballooning to cover everything.
       const bigSize = isMobile
         ? Math.min(window.innerWidth * 1.9, window.innerHeight * 1.05)
         : Math.min(window.innerWidth * 0.85, window.innerHeight * 1.7);
