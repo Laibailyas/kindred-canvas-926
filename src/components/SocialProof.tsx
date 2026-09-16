@@ -1,6 +1,7 @@
 import { animate, motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { BadgeCheck, FileCheck2, Globe2, HeartHandshake, Quote, UtensilsCrossed, Users, Wallet } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, FileCheck2, Globe2, HeartHandshake, Quote, UtensilsCrossed, Users, Wallet } from "lucide-react";
+import { openSubmitDialog } from "./SubmitCharityModal";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -188,10 +189,22 @@ export function SocialProof() {
               </motion.span>
             ))}
           </div>
-          <p className="mt-5 flex items-center gap-2 text-sm text-ink/60">
-            <HeartHandshake className="h-4 w-4 text-flare" />
-            Local charity missing? Submit it and we'll verify it wherever in the world it works.
-          </p>
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-ink/10 pt-4">
+            <p className="flex min-w-0 items-center gap-2 text-sm text-ink/60">
+              <HeartHandshake className="h-4 w-4 shrink-0 text-flare" />
+              Local charity missing? Submit it and we'll verify it wherever in the world it works.
+            </p>
+            <button
+              type="button"
+              onClick={openSubmitDialog}
+              data-cursor-hover
+              className="rise-button group inline-flex shrink-0 items-center gap-2 rounded-full bg-flare px-5 py-2.5 text-sm font-medium text-paper transition-transform duration-300 hover:scale-[1.03]"
+            >
+              <span aria-hidden className="rise-fill rise-fill--ink" />
+              <span className="rise-label">Add your favorite charity</span>
+              <ArrowUpRight className="rise-label h-4 w-4" />
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>
