@@ -35,7 +35,7 @@ export function SecurityControl() {
   const [on, setOn] = useState(true);
 
   return (
-    <section id="security" className="relative overflow-hidden bg-ink px-5 pb-16 pt-20 text-paper sm:px-6 sm:pb-24 sm:pt-28 md:pb-32 md:pt-44">
+    <section id="security" className="relative overflow-hidden bg-ink px-5 pb-8 pt-20 text-paper sm:px-6 sm:pb-10 sm:pt-28 md:pb-12 md:pt-44">
       <motion.div
         aria-hidden
         className="pointer-events-none absolute -left-40 top-1/3 h-[36rem] w-[36rem] rounded-full bg-flare/20 blur-[130px]"
