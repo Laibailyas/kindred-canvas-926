@@ -184,7 +184,7 @@ export function ChooseCause() {
                           <h3 className="mt-3 font-display text-[clamp(1.9rem,5vw,5.4rem)] uppercase leading-[0.9]">{item.label}</h3>
                           <p className="mt-3 max-w-xl text-sm leading-relaxed text-paper/80 md:text-base">{item.blurb}</p>
                           <div className="mt-5 flex flex-wrap items-center gap-2">
-                            <span className="mr-1 font-stamp text-[0.58rem] uppercase tracking-[0.22em] text-paper/65">Partners like</span>
+                            <span className="mr-1 font-stamp text-[0.58rem] uppercase tracking-[0.22em] text-paper/65">Charities like</span>
                             {item.charities.map((name) => (
                               <span key={name} className="whitespace-nowrap border border-paper/30 bg-ink/35 px-2 py-1 text-[0.6rem] tracking-wide backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-xs sm:tracking-normal">{name}</span>
                             ))}

@@ -21,7 +21,7 @@ export function PartnerMarquee() {
     >
       <div className="mx-auto flex max-w-[1800px] flex-col items-center gap-4 px-6 py-6 md:flex-row md:gap-10">
         <p className="shrink-0 text-sm leading-tight text-ink/70 md:max-w-[9rem]">
-          You can donate to
+          Donate to charities like
         </p>
         <div className="marquee-mask relative w-full overflow-hidden">
           <div className="animate-marquee flex w-max items-center gap-14 pr-14">
