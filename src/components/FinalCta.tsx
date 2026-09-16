@@ -29,7 +29,7 @@ export function FinalCta() {
   return (
     <section
       id="install"
-      className="relative flex h-[100svh] min-h-[620px] flex-col items-center justify-center overflow-hidden bg-paper px-4 text-ink sm:px-6 md:h-screen"
+      className="relative flex h-[84svh] min-h-[540px] flex-col items-center justify-center overflow-hidden bg-paper px-4 text-ink sm:px-6 md:h-[82svh]"
     >
       {/* side collages */}
       <motion.img
