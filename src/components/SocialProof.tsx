@@ -171,7 +171,7 @@ export function SocialProof() {
               <Globe2 className="h-3.5 w-3.5 text-flare" /> Worldwide, 40+ countries
             </span>
           </div>
-          <div className="mt-5 flex flex-wrap gap-3">
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {CHARITIES.map((charity, i) => (
               <motion.span
                 key={charity.name}
@@ -181,7 +181,7 @@ export function SocialProof() {
                 transition={{ duration: 0.4, delay: i * 0.04, ease }}
                 whileHover={{ y: -4 }}
                 data-cursor-hover
-                className="flex items-center gap-2 rounded-full border border-moss/30 bg-paper px-5 py-2.5 text-sm"
+                className="flex w-full min-w-0 items-center gap-2 rounded-full border border-moss/30 bg-paper px-5 py-2.5 text-sm"
               >
                 <BadgeCheck className="h-4 w-4 text-moss" />
                 {charity.name}
