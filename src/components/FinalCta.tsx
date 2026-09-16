@@ -36,23 +36,23 @@ export function FinalCta() {
         src={collageFinalLeft}
         alt=""
         aria-hidden
-        style={{ x: leftX, y: leftY, translateY: "-50%" }}
+        style={{ x: leftX, y: leftY }}
         initial={{ opacity: 0, rotate: -4 }}
         whileInView={{ opacity: 1, rotate: -2 }}
         viewport={{ once: true }}
         transition={{ duration: 1.1, ease }}
-        className="pointer-events-none absolute left-4 top-1/2 z-20 h-auto w-[42vw] max-w-[210px] -translate-y-1/2 object-contain object-left-top mix-blend-multiply sm:left-3 sm:w-[34vw] sm:max-w-[350px] lg:left-5 lg:w-[32vw] lg:max-w-[560px]"
+        className="pointer-events-none absolute left-4 top-[4svh] z-20 h-auto w-[42vw] max-w-[210px] object-contain object-left-top mix-blend-multiply sm:left-3 sm:top-[5svh] sm:w-[34vw] sm:max-w-[350px] lg:left-5 lg:top-[6svh] lg:w-[32vw] lg:max-w-[560px]"
       />
       <motion.img
         src={collageFinalRight}
         alt=""
         aria-hidden
-        style={{ x: rightX, y: rightY, translateY: "-50%" }}
+        style={{ x: rightX, y: rightY }}
         initial={{ opacity: 0, rotate: 4 }}
         whileInView={{ opacity: 1, rotate: 2 }}
         viewport={{ once: true }}
         transition={{ duration: 1.1, ease }}
-        className="pointer-events-none absolute right-4 top-1/2 z-20 h-auto w-[42vw] max-w-[210px] -translate-y-1/2 object-contain object-right-top mix-blend-multiply sm:right-3 sm:w-[34vw] sm:max-w-[350px] lg:right-5 lg:w-[32vw] lg:max-w-[560px]"
+        className="pointer-events-none absolute right-4 top-[4svh] z-20 h-auto w-[42vw] max-w-[210px] object-contain object-right-top mix-blend-multiply sm:right-3 sm:top-[5svh] sm:w-[34vw] sm:max-w-[350px] lg:right-5 lg:top-[6svh] lg:w-[32vw] lg:max-w-[560px]"
       />
 
       <div className="relative z-10 mx-auto flex max-w-2xl -translate-y-[4svh] flex-col items-center px-2 text-center sm:px-8">

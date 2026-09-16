@@ -79,15 +79,14 @@ export function InstallSun({ anchorRef }: { anchorRef: RefObject<HTMLElement | n
     }
 
     if (ctaProgress > 0) {
-      // Keep the bloom centred behind the final CTA so the copy and collages
-      // share one visual centre instead of being pulled toward the bottom.
+      // Let the bloom sit on the bottom edge so only its upper half frames the CTA.
       const bigSize = isMobile
         ? Math.min(window.innerWidth * 1.9, window.innerHeight * 1.05)
         : Math.min(window.innerWidth * 0.85, window.innerHeight * 1.7);
       const bigX = window.innerWidth / 2 - bigSize / 2;
       // Mobile mirrors the reference: a wide half-sun rising from the bottom
       // edge, with the copy sitting inside its visible half.
-      const bigY = window.innerHeight / 2 - bigSize / 2;
+      const bigY = window.innerHeight - bigSize / 2;
       finalSize = lerp(finalSize, bigSize, ctaProgress);
       finalX = lerp(finalX, bigX, ctaProgress);
       finalY = lerp(finalY, bigY, ctaProgress);
