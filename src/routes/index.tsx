@@ -8,7 +8,6 @@ import { SecurityControl } from "@/components/SecurityControl";
 import { SocialProof } from "@/components/SocialProof";
 import { Faq } from "@/components/Faq";
 import { FinalCta } from "@/components/FinalCta";
-import { LegalFooter } from "@/components/LegalFooter";
 import { SubmitBand } from "@/components/SubmitBand";
 import { SubmitCharityModal } from "@/components/SubmitCharityModal";
 import { Toaster } from "@/components/ui/sonner";
@@ -41,7 +40,6 @@ function Index() {
       <SubmitBand />
       <Faq />
       <FinalCta />
-      <LegalFooter />
       <SubmitCharityModal />
       <Toaster position="top-center" />
     </main>
