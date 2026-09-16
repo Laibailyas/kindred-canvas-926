@@ -62,7 +62,7 @@ export function LegalFooter({ embedded = false }: { embedded?: boolean }) {
         className={`${embedded ? "absolute inset-x-0 bottom-0" : "relative"} z-30 px-5 pb-5 pt-4 text-paper sm:px-6 sm:pb-7 sm:pt-5 ${embedded ? "bg-transparent" : "border-t border-paper/10 bg-ink"}`}
       >
         <div className="mx-auto flex max-w-[1800px] flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs text-paper/75 sm:gap-x-10 sm:text-sm">
-          <p>Copyright 2026 dotis.ai</p>
+          <p>© 2026 dotis.ai</p>
           <nav aria-label="Legal" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {(Object.keys(DOCUMENTS) as LegalDocument[]).map((key) => (
               <button
